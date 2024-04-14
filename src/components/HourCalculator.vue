@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="add-more-input">
-            <button @click="addInput">Add input</button>
+            <button @click="addInput">+ Add More</button>
         </div>
     </div>
 </template>
