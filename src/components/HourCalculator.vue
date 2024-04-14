@@ -30,7 +30,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 // defineProps<{ msg: string }>()
 const totalInputLength = ref(8)
