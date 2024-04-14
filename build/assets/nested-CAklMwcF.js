@@ -1,0 +1,1 @@
+import{c as a,t as o,u as t,o as e,g as n,h as s}from"./commonstate-DhqvgUxh.js";const c={__name:"App",setup(r){return(m,p)=>(e(),a("div",null,o(t(n).msg)+" Day Calculator coming soon... ",1))}};s(c).mount("#nested");
