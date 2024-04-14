@@ -5,6 +5,9 @@
         </div>
         <div class="title-output-container">
             <div class="hours-minutes-outputs-titles">
+                <h5>
+                    Your Total :->
+                </h5>
                 <h5>{{ totalHours }}</h5>
                 <h5>-:-</h5>
                 <h5>{{ totalMinutes }}</h5>
@@ -25,7 +28,7 @@
             </div>
         </div>
         <div class="add-more-input">
-            <button @click="addInput">+ Add More</button>
+            <button @click="addInput">+ Add More Lines</button>
         </div>
     </div>
 </template>
