@@ -14,9 +14,9 @@ import HourCalculator from '../components/HourCalculator.vue';
               <img src="/clock.png" alt="logo" class="logo-image" />
               <h2 class="logo">Calculate Hours</h2>
             </div>
-            <div>
+            <!-- <div>
               <a href="/day-calculator/">Day Calculator</a>
-            </div>
+            </div> -->
           </header>
         </div>
       </section>
