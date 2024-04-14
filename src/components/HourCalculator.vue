@@ -1,7 +1,7 @@
 <template>
     <div class="hour-claculator-container">
         <div class="hour-calculator-header">
-            <h3>Hour Calculator</h3>
+            <h3>Hours Calculator</h3>
         </div>
         <div class="title-output-container">
             <div class="hours-minutes-outputs-titles">
