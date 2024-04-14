@@ -24,9 +24,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -56,12 +53,32 @@ button:focus-visible {
 .card {
   padding: 2em;
 }
-
-#app {
+.header-section{
+  background-color: #ffffff22;
+}
+.container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+}
+.calculate-hour-page-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.logo-container{
+  display: flex;
+  align-items: center;
+}
+.logo-image{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.logo{
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: light) {
@@ -75,21 +92,27 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+  .header-section{
+    background-color: #1a1a1a22;
+  }
 }
 
-.calculate-hour-page-header{
+.hour-calculator-main-container{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-
 }
+
 .hour-claculator-container{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 320px;
+  min-height: 100vh;
 }
 .hour-calculator-header{
   background-color: #1a1a1a;
   color: #fff;
   padding: 10px 0;
+  text-align: center;
 }
 .title-output-container{
   position: sticky;
@@ -160,7 +183,8 @@ button:focus-visible {
 
 .calculate-hour-page-footer{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 0;
+
 }

@@ -5,17 +5,26 @@ import HourCalculator from '../components/HourCalculator.vue';
 
 <template>
   <div class="calculate-hour-container">
-    <header class="calculate-hour-page-header">
-      <h2>Calculate Hours</h2>
-    </header>
-    <section>
-      <HourCalculator/>
-    </section>
-    <!-- <section>Sponsors</section> -->
-    <footer class="calculate-hour-page-footer">All rights reserved. Copyright © Hours Calculator</footer>
+    <div>
+      <section class="header-section">
+
+        <div class="container">
+          <header class="calculate-hour-page-header">
+            <div class="logo-container">
+              <img src="/clock.png" alt="logo" class="logo-image" />
+              <h2 class="logo">Calculate Hours</h2>
+            </div>
+          </header>
+        </div>
+      </section>
+      <section class="hour-calculator-main-container">
+
+        <HourCalculator />
+      </section>
+      <!-- <section>Sponsors</section> -->
+      <footer class="calculate-hour-page-footer">All rights reserved. Copyright © Hours Calculator</footer>
+    </div>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

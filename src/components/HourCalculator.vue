@@ -1,8 +1,8 @@
 <template>
     <div class="hour-claculator-container">
-        <div class="hour-calculator-header">
+        <!-- <div class="hour-calculator-header">
             <h3>Hours Calculator</h3>
-        </div>
+        </div> -->
         <div class="title-output-container">
             <div class="hours-minutes-outputs-titles">
                 <h5>
