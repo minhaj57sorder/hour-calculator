@@ -17,7 +17,7 @@
         </div>
         <div class="hour-calculator-inputs-container-space">
             <div class="hour-calculator-inputs-container">
-                <div v-for="i in totalInputLength" class="hours-minutes-input-container">
+                <div v-for="i in totalInputLength" :key="i" class="hours-minutes-input-container">
                     <div class="hours-input"><input ref="inputHours" type="text" @input="calculate"></div>
                     <div class="hours-minutes-separator">:</div>
                     <div class="minutes-input"><input ref="inputMinutes" type="text" @input="calculate"></div>
@@ -31,21 +31,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-// defineProps<{ msg: string }>()
-const totalInputLength = ref(8)
-const totalHours = ref(0)
-const totalMinutes = ref(0)
-const inputHours = ref([])
-const inputMinutes = ref([])
-const addInput = () => {
+import { ref, Ref } from 'vue'
+
+interface Input {
+    value: string;
+}
+
+const totalInputLength: Ref<number> = ref(8)
+const totalHours: Ref<number> = ref(0)
+const totalMinutes: Ref<number> = ref(0)
+const inputHours: Ref<Input[]> = ref([])
+const inputMinutes: Ref<Input[]> = ref([])
+
+const addInput = (): void => {
     totalInputLength.value += 2
 }
-const calculate = () => {
-    console.log('Calculating...', inputHours.value[0].value, inputMinutes.value)
-    let minutes = inputMinutes.value.reduce((acc, curr) => Number(acc) + Number(curr.value), 0)
-    let hours = inputHours.value.reduce((acc, curr) => Number(acc) + Number(curr.value), 0)
-    console.log('Total hours:', hours, minutes)
+
+const calculate = (): void => {
+    let minutes: number = inputMinutes.value.reduce((acc: number, curr: Input) => Number(acc) + Number(curr.value), 0)
+    let hours: number = inputHours.value.reduce((acc: number, curr: Input) => Number(acc) + Number(curr.value), 0)
     totalHours.value = Math.floor(minutes / 60) + hours
     totalMinutes.value = minutes % 60
 }
